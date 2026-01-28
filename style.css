@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 /* 1. Global Reset */
 * {
     margin: 0;
@@ -21,10 +24,10 @@ body {
     overflow-x: hidden;
 }
 
-/* 2. Header & Centering */
+/* 2. Header & Centering - Scaled Down 35% */
 header {
     background-color: var(--primary-blue);
-    padding: 3rem 0;
+    padding: 2rem 0; /* Reduced from 3rem */
     width: 100%;
     display: flex;
     justify-content: center; 
@@ -39,9 +42,9 @@ header {
 
 .title-box {
     background-color: var(--accent-orange);
-    padding: 15px 40px;
+    padding: 10px 25px; /* Reduced from 15px 40px */
     border-radius: 4px;
-    margin-bottom: 25px;
+    margin-bottom: 18px; /* Reduced from 25px */
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     border: 2px solid #fdcb6e;
 }
@@ -49,25 +52,25 @@ header {
 #welcome-message {
     color: #ffffff;
     margin: 0;
-    font-size: 2.5rem; /* Using your larger preference */
+    font-size: 1.6rem; /* Scaled down from 2.5rem */
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     text-align: center;
 }
 
 .profile-img {
-    width: 180px;
-    height: 180px;
+    width: 120px; /* Scaled down from 180px */
+    height: 120px; /* Scaled down from 180px */
     border-radius: 50%;
-    border: 5px solid white;
+    border: 4px solid white; /* Slightly thinner border */
     object-fit: cover;
     display: block;
 }
 
 .name-title {
     color: white;
-    margin-top: 15px;
-    font-size: 2rem;
+    margin-top: 10px; /* Reduced from 15px */
+    font-size: 1.3rem; /* Scaled down from 2rem */
 }
 
 /* 3. Main Content Area */
@@ -109,4 +112,36 @@ main {
     border-bottom: 2px solid var(--primary-blue);
     display: block; /* Changed to block for better centering in the card */
     padding-bottom: 5px;
+}
+
+/* 4. Final Polishes & Mobile Adjustments */
+
+/* Fix for the last paragraph in a card to avoid extra bottom space */
+.card p:last-child {
+    margin-bottom: 0;
+}
+
+/* Make the profile image responsive on small screens */
+@media (max-width: 480px) {
+    #welcome-message {
+        font-size: 1.8rem;
+        padding: 10px 20px;
+    }
+    
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .name-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: #636e72;
+    font-size: 0.9rem;
 }
