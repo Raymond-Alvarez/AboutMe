@@ -1,0 +1,112 @@
+/* 1. Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-blue: #0984e3;
+    --dark-text: #2d3436;
+    --light-bg: #f5f6fa;
+    --accent-orange: #FF4433;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* 2. Header & Centering */
+header {
+    background-color: var(--primary-blue);
+    padding: 3rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 100%;
+}
+
+.title-box {
+    background-color: var(--accent-orange);
+    padding: 15px 40px;
+    border-radius: 4px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    border: 2px solid #fdcb6e;
+}
+
+#welcome-message {
+    color: #ffffff;
+    margin: 0;
+    font-size: 2.5rem; /* Using your larger preference */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid white;
+    object-fit: cover;
+    display: block;
+}
+
+.name-title {
+    color: white;
+    margin-top: 15px;
+    font-size: 2rem;
+}
+
+/* 3. Main Content Area */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    width: 90%;
+    max-width: 600px;
+    margin-bottom: 20px;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.01);
+}
+
+/* Paragraph styling inside cards */
+.card p {
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+    color: var(--dark-text);
+    text-align: left;
+}
+
+/* Heading styling inside cards */
+.card h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--primary-blue);
+    border-bottom: 2px solid var(--primary-blue);
+    display: block; /* Changed to block for better centering in the card */
+    padding-bottom: 5px;
+}
